@@ -1,0 +1,201 @@
+:root {
+    --white: #FFFDEE;
+    --red: #E84043;
+  }
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+li{
+    list-style: none;
+}
+
+.banner{
+    background-image: url("assets/banner.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+
+.banner__title{
+    background-image: url("assets/logo_1.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 220px;
+    display: block;
+    text-indent: -9999px;
+}
+
+.banner__box{
+    position: absolute;
+    top: 50%; right: 50%;
+    transform: translate(50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner__button{
+    margin-top: 16px;
+    color: var(--white);
+    border: 2px solid var(--white);
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    text-decoration: none;
+    padding: 16px 24px;
+    transition: 0.1s background-color linear, 0.1s color linear;
+
+}
+
+.banner__button:hover{
+    background-color:  var(--white);
+    color: #000;
+    transition: 0.1s background-color linear, 0.1s color linear;
+}
+
+.pizzas{
+    background-image: url("assets/pizza.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+}
+
+.pizzas_box{
+    background-color:  var(--white);
+    width: 90%;
+    padding: 48px 56px;
+}
+
+@media screen and (min-width: 1024px) {
+    .pizzas_box{
+        width: 50%;
+    }
+}
+ul{
+    margin-top: 16px;
+}
+
+li + li{
+    margin-top: 16px;
+
+}
+
+.entradas, .sobremesas{
+    padding: 48px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .entradas, .sobremesas{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 48px;
+    }  
+}
+
+
+.profile{
+    background-color:  var(--white);
+}
+
+.profile__box,.about__box{
+    width: 90%;
+    margin: 0 auto;
+    padding: 48px 56px;
+    position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+    .profile__box,.about__box{
+        display: flex;
+    }  
+}
+
+.profile__box img,.about__box img{
+    width: 100%;
+}
+
+
+.profile__title{
+    font-size: 3em;
+    left: 40%;
+}
+
+.about__title{
+    font-size: 3em;
+    right: 40%;
+}
+
+@media screen and (min-width: 1024px) {
+    .profile__title, .about__title{
+        top: 48px;
+        position: absolute;
+    }
+}
+
+/* .profile__text{
+    margin-top: 150px;
+    margin-left: 48px;
+}
+
+.about__text{
+    margin-top: 100px;
+    margin-right: 48px;
+} */
+
+@media screen and (min-width: 1024px) {
+    .profile__text{
+        margin-top: 150px;
+        margin-left: 48px;
+    }
+    
+    .about__text{
+        margin-top: 100px;
+        margin-right: 48px;
+    }
+}
+.images{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (min-width: 1024px) {
+    .images{
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+.images img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
