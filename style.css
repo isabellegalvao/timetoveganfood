@@ -100,9 +100,17 @@ li{
         width: 50%;
     }
 }
+
 ul{
     margin-top: 16px;
 }
+
+@media screen and (max-width: 1023px) {
+    article + article{
+        margin-top: 24px;
+    }
+}
+
 
 li + li{
     margin-top: 16px;
@@ -191,7 +199,7 @@ li + li{
 
 @media screen and (min-width: 1024px) {
     .images{
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 .images img{
