@@ -25,13 +25,23 @@ li{
 }
 
 .banner{
-    background-image: url("assets/banner.jpg");
     background-size: cover;
     background-position: bottom;
     background-attachment: fixed;
     width: 100%;
     height: 70vh;
     position: relative;
+}
+
+@media screen and (min-width: 801px) {
+    .banner{
+        background-image: url("assets/banner.jpg");
+    }
+}
+@media screen and (max-width: 800px) {
+    .banner{
+        background-image: url("assets/bannerMob.jpg");
+    }
 }
 
 .banner__title{
@@ -76,7 +86,6 @@ li{
 }
 
 .pizzas{
-    background-image: url("assets/pizza.jpg");
     background-size: cover;
     background-position: bottom;
     background-attachment: fixed;
@@ -86,18 +95,37 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 48px;
+    padding: 48px 24px;
 }
+@media screen and (min-width: 1024px) {
+    .pizzas{
+        padding: 48px;
+    }
+}
+
+
+@media screen and (min-width: 801px) {
+    .pizzas{
+        background-image: url("assets/pizza.jpg");
+    }
+}
+@media screen and (max-width: 800px) {
+    .pizzas{
+        background-image: url("assets/pizzaMob.jpg");
+    }
+}
+
 
 .pizzas_box{
     background-color:  var(--white);
     width: 90%;
-    padding: 48px 56px;
+    padding: 48px 24px;
 }
 
 @media screen and (min-width: 1024px) {
     .pizzas_box{
         width: 50%;
+        padding: 48px 56px;
     }
 }
 
@@ -118,7 +146,7 @@ li + li{
 }
 
 .entradas, .sobremesas{
-    padding: 48px;
+    padding: 48px 24px;
     width: 90%;
     margin: 0 auto;
 }
@@ -128,6 +156,7 @@ li + li{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 48px;
+        padding: 48px;
     }  
 }
 
@@ -139,13 +168,14 @@ li + li{
 .profile__box,.about__box{
     width: 90%;
     margin: 0 auto;
-    padding: 48px 56px;
+    padding: 48px 24px;
     position: relative;
 }
 
 @media screen and (min-width: 1024px) {
     .profile__box,.about__box{
         display: flex;
+        padding: 48px 56px;
     }  
 }
 
@@ -155,13 +185,15 @@ li + li{
 
 
 .profile__title{
-    font-size: 3em;
     left: 40%;
 }
 
 .about__title{
-    font-size: 3em;
     right: 40%;
+}
+@media screen and (min-width: 1024px) {
+    .about__title, .profile__title{
+        font-size: 3em;}
 }
 
 @media screen and (min-width: 1024px) {
@@ -192,6 +224,7 @@ li + li{
         margin-right: 48px;
     }
 }
+
 .images{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
