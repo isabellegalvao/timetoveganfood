@@ -26,6 +26,9 @@ li{
 
 .banner{
     background-size: cover;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
     background-position: bottom;
     background-attachment: fixed;
     width: 100%;
@@ -87,6 +90,9 @@ li{
 
 .pizzas{
     background-size: cover;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
     background-position: bottom;
     background-attachment: fixed;
     width: 100%;
