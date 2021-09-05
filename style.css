@@ -75,6 +75,7 @@ li{
     text-decoration: none;
     padding: 16px 24px;
     transition: 0.1s background-color linear, 0.1s color linear;
+    text-align: center;
 
 }
 
@@ -138,7 +139,7 @@ ul{
 }
 
 
-li + li{
+article li + article li{
     margin-top: 16px;
 
 }
@@ -163,6 +164,45 @@ li + li{
     background-color:  var(--white);
 }
 
+.intro{
+    background-color:  var(--white);
+    padding: 48px 24px;
+}
+
+.intro__box{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.intro__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9em;
+    font-weight: 700;
+    margin: 0 0 48px;
+
+}
+
+.intro__list li + li {
+    margin-left: 32px;
+}
+
+@media screen and (max-width: 1023px) {
+    .intro__list{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .intro__list li + li {
+        margin-left: 0;
+    }
+
+}
+
 .profile__box,.about__box{
     width: 90%;
     margin: 0 auto;
@@ -171,13 +211,20 @@ li + li{
 }
 
 @media screen and (min-width: 1024px) {
-    .profile__box,.about__box{
-        display: flex;
+    .profile,.about{
         padding: 48px 56px;
+    }
+    .profile__box,.about__box, .intro__box{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }  
+
+    .about__box{
+        text-align: right;
+    }
 }
 
-.profile__box img,.about__box img{
+.profile__box img,.about__box img, .intro__box img{
     width: 100%;
 }
 
@@ -201,16 +248,6 @@ li + li{
     }
 }
 
-/* .profile__text{
-    margin-top: 150px;
-    margin-left: 48px;
-}
-
-.about__text{
-    margin-top: 100px;
-    margin-right: 48px;
-} */
-
 @media screen and (min-width: 1024px) {
     .profile__text{
         margin-top: 150px;
@@ -221,6 +258,9 @@ li + li{
         margin-top: 100px;
         margin-right: 48px;
     }
+
+    .intro__text{
+        margin-left: 48px;}
 }
 
 .images{
@@ -237,4 +277,38 @@ li + li{
     width: 100%;
     object-fit: cover;
     height: 100%;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.buttons a+a{
+    margin-left: 8px;
+}
+
+.buttons.red a{
+    color: var(--red);
+    border: 2px solid var(--red);
+    background-color: transparent;
+
+}
+
+.buttons.red a:hover{
+    background-color:  var(--red);
+    color: var(--white);
+}
+
+footer{
+    background-color:  var(--red);
+    color: var(--white);
+    padding: 32px 48px;
+    text-align: center;
+}
+
+footer a{
+    font-size: 2em;
+    color: var(--white);
 }
