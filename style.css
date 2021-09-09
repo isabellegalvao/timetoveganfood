@@ -39,7 +39,7 @@ li{
 }
 @media screen and (max-width: 800px) {
     .banner{
-        background-image: url("assets/bannerMob.jpg");
+        background-image: url("assets/AtivoMOB.png");
     }
 }
 
