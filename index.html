@@ -9,8 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@200;300;400;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="assets/banner.jpg" as="image"/>
-    <link rel="preload" href="assets/bannerMob.jpg" as="image"/>
     <meta name="google-site-verification" content="fz5LRgPn52gFByM9Tsmrzwi_OEOOV7ldc1TTYYn3WWA" />
 
     <meta content="Pizzaria vegana, somente insumos selecionados, bem preparados e cruelty-free, porque sua escolha pode sim fazer a diferença." name="description" />
@@ -79,6 +77,7 @@
     }
 
    function handleInstagram(value){
+        console.log("hi")
         gtag('event', 'instagram_lead', {'event_category': 'engagement','event_label': `Instagram/${value}`});
         gtag_report_conversion_insta()
    }
