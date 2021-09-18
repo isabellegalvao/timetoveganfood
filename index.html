@@ -41,6 +41,53 @@
 
   gtag('config', 'UA-205520104-1');
 </script>
+<!-- Global site tag (gtag.js) - Google Ads: 772821644 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-772821644"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-772821644');
+</script>
+
+<script>
+    function gtag_report_conversion_insta(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-772821644/GBWrCNHt0fUCEIylwfAC',
+          'event_callback': callback
+      });
+      return false;
+    }
+
+    function gtag_report_conversion_ifood(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-772821644/QjKICM-q8_QCEIylwfAC',
+          'event_callback': callback
+      });
+      return false;
+    }
+
+   function handleInstagram(value){
+        gtag('event', 'instagram_lead', {'event_category': 'engagement','event_label': `Instagram/${value}`});
+        gtag_report_conversion_insta()
+   }
+
+   function handleIfood(value){
+        gtag('event', 'generate_lead', {'event_category': 'engagement','event_label': `Ifood/${value}`});
+        gtag_report_conversion_ifood()
+   }
+</script>
 
 </head>
 <body>
@@ -50,8 +97,8 @@
                 <h1 class="banner__title">Time to Vegan Food - Pizzaria Vegana</h1>
                 <div class="buttons">
                     <a href="https://www.instagram.com/time_to_veganfood/?hl=pt-br" 
-                    onclick="gtag('event', 'instagram_lead', {'event_category': 'engagement','event_label': 'Instagram/Ver mais+'});" class="banner__button">Ver mais+</a>
-                    <a href="https://www.ifood.com.br/delivery/sao-paulo-sp/time-to-vegan-food-mirandopolis/2d52ed09-d06f-4e89-a1f1-4a25c4a288ad" onclick="gtag('event', 'generate_lead', {'event_category': 'engagement','event_label': 'Ifood/Peça Online!'});" class="banner__button">Peça Online!</a>
+                    onclick="handleInstagram('Ver mais+')" class="banner__button">Ver mais+</a>
+                    <a href="https://www.ifood.com.br/delivery/sao-paulo-sp/time-to-vegan-food-mirandopolis/2d52ed09-d06f-4e89-a1f1-4a25c4a288ad" onclick="handleIfood('Peça Online!')" class="banner__button">Peça Online!</a>
                 </div>
             </article>
         </section> 
@@ -147,8 +194,8 @@
                     </li>
                 </ul>
                 <div class="buttons red">
-                    <a href="https://www.instagram.com/time_to_veganfood/?hl=pt-br" onclick="gtag('event', 'instagram_lead', {'event_category': 'engagement','event_label': 'Instagram/Ver Fotos'});" class="banner__button">Ver fotos</a>
-                    <a href="https://www.ifood.com.br/delivery/sao-paulo-sp/time-to-vegan-food-mirandopolis/2d52ed09-d06f-4e89-a1f1-4a25c4a288ad" onclick="gtag('event', 'generate_lead', {'event_category': 'engagement','event_label': 'Ifood/Peça Online!'});" class="banner__button">Peça Online!</a>
+                    <a href="https://www.instagram.com/time_to_veganfood/?hl=pt-br" onclick="handleInstagram('Ver Fotos');" class="banner__button">Ver fotos</a>
+                    <a href="https://www.ifood.com.br/delivery/sao-paulo-sp/time-to-vegan-food-mirandopolis/2d52ed09-d06f-4e89-a1f1-4a25c4a288ad" onclick="handleIfood('Peça Online!')" class="banner__button">Peça Online!</a>
                 </div>
             </article>
         </section>
@@ -207,8 +254,8 @@
                 </picture>
             </article>
             <div class="buttons red">
-                <a href="https://www.instagram.com/time_to_veganfood/?hl=pt-br" onclick="gtag('event', 'instagram_lead', {'event_category': 'engagement','event_label': 'Instagram/Ver mais+'});" class="banner__button">Ver mais+</a>
-                <a href="https://www.ifood.com.br/delivery/sao-paulo-sp/time-to-vegan-food-mirandopolis/2d52ed09-d06f-4e89-a1f1-4a25c4a288ad" onclick="gtag('event', 'generate_lead', {'event_category': 'engagement','event_label': 'Ifood/Peça Online!'});" class="banner__button">Peça Online!</a>
+                <a href="https://www.instagram.com/time_to_veganfood/?hl=pt-br" onclick="handleInstagram('Ver mais+');" class="banner__button">Ver mais+</a>
+                <a href="https://www.ifood.com.br/delivery/sao-paulo-sp/time-to-vegan-food-mirandopolis/2d52ed09-d06f-4e89-a1f1-4a25c4a288ad" onclick="handleIfood('Peça Online!')" class="banner__button">Peça Online!</a>
             </div>
         </section>
         <section class="images">
@@ -227,7 +274,7 @@
         </section>
     </main>
     <footer>
-        <div><a href="https://www.instagram.com/time_to_veganfood/?hl=pt-br" onclick="gtag('event', 'instagram_lead', {'event_category': 'engagement','event_label': 'Instagram/Footer'});"> Nos acompanhe no instagram para mais novidades</a></div>
+        <div><a href="https://www.instagram.com/time_to_veganfood/?hl=pt-br" onclick="handleInstagram('Footer')"> Nos acompanhe no instagram para mais novidades</a></div>
         <div>© 2021 Isabela de Lemos, Todos direitos reservados</div>
     </footer>
 </body>
