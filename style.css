@@ -396,4 +396,5 @@ footer a{
     display: block;
     text-indent: -9999px;
     margin-bottom: 24px;
+    align-self: center;
 }
